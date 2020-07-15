@@ -13,4 +13,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.divisorGame(3))
+    for i in range(1, 20):
+        print(f'{i} {s.divisorGame(i)}')
