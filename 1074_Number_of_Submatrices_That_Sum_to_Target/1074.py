@@ -1,5 +1,9 @@
-# AC 9184 ms, faster than 28.44% Python3
-# Time complexity O(Row*Row*Col)
+# AC
+# Runtime: 6476 ms, faster than 70.93% of Python3
+# Memory Usage: 20.9 MB, less than 48.94% of Python3
+# Time complexity O(R*R*C)
+# Space complexity: O(C)
+
 from typing import List
 
 class Solution:
@@ -8,17 +12,19 @@ class Solution:
         X = len(matrix)
         Y = len(matrix[0])
         for x1 in range(0, X):
-            dp = {}  # x2, y => int
+            prevRows = {}
             for x2 in range(x1, X):
+                thisRow = {}
                 preSumDict = {0: 1} # value => occurrence
                 preSum = 0
                 for y in range(Y):
-                    colSum = dp.get((x2-1, y), 0) + matrix[x2][y]
-                    dp[(x2, y)] = colSum
+                    colSum = prevRows.get(y, 0) + matrix[x2][y]
+                    thisRow[y] = colSum
                     preSum += colSum
                     complement = preSum - target
                     ret += preSumDict.get(complement, 0)
                     preSumDict[preSum] = preSumDict.get(preSum, 0) + 1
+                prevRows = thisRow
         return ret
 
 
