@@ -1,4 +1,6 @@
-# AC: 2544 ms, faster than 5.08%
+# AC
+# Runtime: 1892 ms, faster than 5.08%
+# Memory Usage: 20.8 MB, less than 37.57%
 
 import math
 from typing import List
