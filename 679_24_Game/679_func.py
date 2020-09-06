@@ -1,3 +1,7 @@
+# AC
+# Runtime: 156 ms, faster than 41.86% of Python3 online submissions for 24 Game.
+# Memory Usage: 14 MB, less than 10.33% of Python3 online submissions for 24 Game.
+
 import math
 from itertools import permutations, product
 from typing import List
