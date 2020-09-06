@@ -2,6 +2,9 @@
 # Runtime: 620 ms, faster than 65.77%
 # Memory Usage: 16.3 MB, less than 75.61%
 
+# Method: Sliding Window, 2 sliding windows
+# Time Complexity: O(N)
+
 from collections import defaultdict
 from typing import List, Dict
 
