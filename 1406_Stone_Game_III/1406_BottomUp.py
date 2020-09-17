@@ -1,5 +1,6 @@
 # AC
 import math
+from itertools import product
 from typing import List
 
 class Solution:

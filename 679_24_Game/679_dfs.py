@@ -21,10 +21,15 @@ class Solution:
                 for op, values in product(op_lst, permutations(lst)):
                     yield op(values[0], values[1])
             else:
+                # choose 2 indices from lst of length n
                 for choosen_idx_lst in combinations(list(range(len(lst))), 2):
+                    # remaining indices not choosen (of length n-2)
                     idx_remaining_set = set(list(range(len(lst)))) - set(choosen_idx_lst)
+
+                    # remaining values not choosen (of length n-2)
                     value_remaining_lst = list(map(lambda x: lst[x], idx_remaining_set))
                     for op, idx_lst in product(op_lst, permutations(choosen_idx_lst)):
+                        # 2 choosen values are lst[idx_lst[0]], lst[idx_lst[1]
                         value_remaining_lst.append(op(lst[idx_lst[0]], lst[idx_lst[1]]))
                         yield from recurse(value_remaining_lst)
                         value_remaining_lst = value_remaining_lst[:-1]
