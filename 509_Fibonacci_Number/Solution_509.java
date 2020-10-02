@@ -1,8 +1,11 @@
 /**
- * Result: AC
- * Method: Matrix Power Multiplication
+ * AC
+ * Runtime: 0 ms, faster than 100.00% of Java online submissions for Fibonacci Number.
+ * Memory Usage: 37.9 MB, less than 18.62% of Java online submissions for Fibonacci Number.
+ *
+ * Method: Matrix Fast Power Exponentiation
  * Time Complexity: O(log(N))
- */
+ **/
 class Solution_509 {
     public int fib(int N) {
         if (N <= 1) {
