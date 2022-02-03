@@ -1,3 +1,5 @@
+# Runtime: 36 ms, faster than 87.77% of Python3 online submissions for Two City Scheduling.
+# Memory Usage: 14.5 MB, less than 14.84% of Python3 online submissions for Two City Scheduling.
 from typing import List
 
 class Solution:
